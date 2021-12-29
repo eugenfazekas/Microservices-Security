@@ -1,0 +1,6 @@
+com\manning\mss\ch05\sample01\orderentity\LineItem.class
+com\manning\mss\ch05\sample01\orderentity\Order.class
+com\manning\mss\ch05\sample01\orderentity\Invoice.class
+com\manning\mss\ch05\sample01\exceptions\OrderNotFoundException.class
+com\manning\mss\ch05\service\OrderProcessingService.class
+com\manning\mss\ch05\service\OrderApplication.class

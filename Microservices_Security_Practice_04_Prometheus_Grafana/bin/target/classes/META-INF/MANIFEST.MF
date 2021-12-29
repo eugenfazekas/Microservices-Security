@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: john
+Build-Jdk: 16.0.2
+Implementation-Title: spring-boot-prometheus
+Implementation-Version: 1.0.0
+Implementation-Vendor-Id: com.manning.mss
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/com.manning.mss.ch05.sample02
+Created-By: Maven Integration for Eclipse
+

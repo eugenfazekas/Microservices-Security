@@ -1,0 +1,4 @@
+com\manning\mss\ch06\sample02\model\Item.class
+com\manning\mss\ch06\sample02\service\Inventory.class
+com\manning\mss\ch06\sample02\InventoryAppConfiguration.class
+com\manning\mss\ch06\sample02\InventoryApp.class

@@ -1,0 +1,7 @@
+com\manning\mss\ch06\sample01\model\Order.class
+com\manning\mss\ch06\sample01\OrderProcessingApp$1.class
+com\manning\mss\ch06\sample01\OrderProcessingApp.class
+com\manning\mss\ch06\sample01\model\Item.class
+com\manning\mss\ch06\sample01\service\OrderProcessingService.class
+com\manning\mss\ch06\sample01\OrderAppConfiguration.class
+com\manning\mss\ch06\sample01\model\PaymentMethod.class
