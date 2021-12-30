@@ -1,0 +1,5 @@
+com\manning\mss\ch07\sample01\config\CustomJWTEncoder.class
+com\manning\mss\ch07\sample01\TokenService.class
+com\manning\mss\ch07\sample01\config\AuthorizationServerConfig.class
+com\manning\mss\ch07\sample01\config\WebSecurityConguration.class
+com\manning\mss\ch07\sample01\config\CustomJWTEnhancer.class
