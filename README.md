@@ -1,5 +1,4 @@
 # Microservices-Security
 
-### Inspired by Prabath Siriwardena & Nuwan Dias
+### BASED ON Microservices Security In Action by Prabath Siriwardena & Nuwan Dias
 
-	Microservices Security In Action
