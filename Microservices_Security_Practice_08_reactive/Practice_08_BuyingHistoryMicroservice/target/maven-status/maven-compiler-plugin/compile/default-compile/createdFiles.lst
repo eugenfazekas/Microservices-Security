@@ -1,0 +1,4 @@
+com\manning\mss\ch09\sample03\model\Item.class
+com\manning\mss\ch09\sample03\model\Order.class
+com\manning\mss\ch09\sample03\BuyingHistoryMicroservice.class
+com\manning\mss\ch09\sample03\model\PaymentMethod.class
