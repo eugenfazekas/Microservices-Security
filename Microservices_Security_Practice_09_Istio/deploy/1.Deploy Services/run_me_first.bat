@@ -1,0 +1,1 @@
+kubectl label namespace security istio-injection=enabled

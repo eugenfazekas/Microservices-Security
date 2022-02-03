@@ -84,17 +84,17 @@ echo #### Importing certificates to Inventory Service Keystore
 keytool -import -file export/orderprocessing_service/app_cert.pem -alias orderprocessing_service -noprompt  -keystore export/inventory_service/inventory_service.jks -storepass inventoryservicepassword
 
 
-echo #### Deleting certificates to Inventory Service Keystore
+echo #### Deleting CERTIFICATE AUTHORITY from truststore
 keytool -delete -alias cat -storepass  changeit -keystore "C:/Program Files/Java/jdk-11.0.11/lib/security/cacerts" 
 
-echo #### Adding to truststore
+echo #### Adding CERTIFICATE AUTHORITY to truststore
 
 keytool -import -file export/ca/ca_cert.pem  -alias cat -storepass  changeit -keystore   "C:/Program Files/Java/jdk-11.0.11/lib/security/cacerts" 
 
 
 copy  "C:\Program Files\Java\jdk-11.0.11\lib\security\cacerts" "D:\Programing\Git\Micro_Services-Security\Microservices_Security_Practice_05_mTLS\Practice_05_OrderProcessing_Service\"
 
-copy  "C:\Program Files\Java\jdk-11.0.11\lib\security\cacerts" "D:/Programing/Git/Micro_Services-Security/Microservices_Security_Practice_05_mTLS/Practice_05_Inventory_Service/"
+copy  "C:\Program Files\Java\jdk-11.0.11\lib\security\cacerts"  "D:\Programing\Git\Micro_Services-Security\Microservices_Security_Practice_05_mTLS\Practice_05_Inventory_Service\"
 
 copy  "export\orderprocessing_service\orderprocessing_service.jks" "D:\Programing\Git\Micro_Services-Security\Microservices_Security_Practice_05_mTLS\Practice_05_OrderProcessing_Service\"
 
