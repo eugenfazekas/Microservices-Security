@@ -1,0 +1,37 @@
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: "orders-request-check"
+  namespace: security
+spec:
+  selector:
+    matchLabels:
+      app: orders
+  action: DENY
+  rules:
+  - from:
+    - source:
+        notRequestPrincipals: ["*"]
+---
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: "inventory-request-check"
+  namespace: security
+spec:
+  selector:
+    matchLabels:
+      app: inventory
+  action: ALLOW
+  rules:
+  - from:
+    - source:
+        principals: ["cluster.local/ns/security/sa/orders-account"]
+    - source:
+        namespaces: ["security"]
+    to:
+    - operation:
+        methods: ["PUT"]
+    when:
+    - key: request.auth.claims[iss]
+      values: ["sts.ecomm.com"] 

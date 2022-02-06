@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: orders
+  name: orders-account
   namespace: security
 ---
 apiVersion: v1
@@ -35,7 +35,7 @@ spec:
       labels:
         app: orders
     spec:
-      serviceAccountName: orders
+      serviceAccountName: orders-account
       containers:
       - name: orders
         image: prabath/com.manning.mss.ch12.order:v1

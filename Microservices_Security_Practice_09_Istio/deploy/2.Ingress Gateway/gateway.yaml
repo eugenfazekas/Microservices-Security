@@ -5,11 +5,20 @@ metadata:
   namespace: security
 spec:
   selector:
-    istio: ingressgateway # use Istio default gateway implementation
+    istio: ingressgateway # use istio default ingress gateway
   servers:
+  - port:
+      number: 443
+      name: https
+      protocol: HTTPS
+    tls:
+      mode: SIMPLE
+      credentialName: ecomm-credential # must be the same as secret
+    hosts:
+    - "*.ecomm.com"  
   - port:
       number: 80
       name: http
       protocol: HTTP
     hosts:
-    - "*"
+    - "*.ecomm.com"  	

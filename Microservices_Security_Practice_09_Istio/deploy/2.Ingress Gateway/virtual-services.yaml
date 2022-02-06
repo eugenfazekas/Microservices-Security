@@ -5,16 +5,16 @@ metadata:
   namespace: security
 spec:
   hosts:
-  - "*"
+  - "sts.ecomm.com"
   gateways:
-  - my-gateway
+  - security/my-gateway  
   http:
     - match:
         - uri:
             prefix: /oauth
       route:
       - destination:
-          host: sts-service
+          host: sts-service.security.svc.cluster.local
           port:
             number: 80
 ---
@@ -25,15 +25,35 @@ metadata:
   namespace: security
 spec:
   hosts:
-  - "*"                                
+  - "orders.ecomm.com"                                
   gateways:
-  - my-gateway   
+  - security/my-gateway 
   http:
     - match:
         - uri:
             prefix: /orders
       route:
       - destination:
-          host: orders-service
+          host: orders-service.security.svc.cluster.local
           port:
             number: 80
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: inventory-virtual-service
+  namespace: security
+spec:
+  hosts:
+  - "inventory.ecomm.com"                                
+  gateways:
+  - security/my-gateway  
+  http:
+    - match:
+        - uri:
+            prefix: /inventory
+      route:
+      - destination:
+          host: inventory-service.security.svc.cluster.local
+          port:
+            number: 80            

@@ -1,8 +1,8 @@
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: sts
-  namespace: security
+  name: sts-account
+  namespace: security  
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -42,7 +42,6 @@ metadata:
   namespace: security
   labels:
     app: sts
-    service: sts
 spec:
   replicas: 1 
   selector:
@@ -53,7 +52,7 @@ spec:
       labels:
         app: sts
     spec:
-      serviceAccountName: sts
+      serviceAccountName: sts-account
       containers:
       - name: sts
         image: prabath/com.manning.mss.ch12.sts:v1
@@ -88,7 +87,6 @@ metadata:
   namespace: security
   labels:
     app: sts
-    service: sts
 spec:
  selector:
   app: sts
